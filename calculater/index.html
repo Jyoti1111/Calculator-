@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Calculator</title>
+
+
+    <style>
+        
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .heading {
+            text-align: center;
+            color: rgb(128, 0, 85);
+            margin: 5px;
+        }
+
+        .cal {
+            border: 5px solid green;
+            border-radius: 25px;
+            height: 600px;
+            width: 300px;
+            margin: 35px;
+            padding: 30px;
+            background-color: rgb(255, 187, 230);
+        }
+
+        .ans {
+            width: 290px;
+            height: 120px;
+            border-radius: 10px;
+        }
+
+        input {
+            border: 2px solid green;
+            font-size: 30px;
+        }
+
+        .ind {
+            height: 50px;
+            width: 97px;
+            background-color: rgb(254, 250, 132);
+        }
+
+        .ind:hover {
+            background-color: yellow;
+        }
+
+        .sign {
+            background-color: rgb(186, 252, 252);
+        }
+
+        .sign:hover {
+            background-color: rgb(4, 255, 255);
+        }
+
+        .equal {
+            background-color: rgb(5, 189, 5);
+        }
+
+        .equal:hover {
+            background-color: rgb(143, 248, 143);
+        }
+
+        .del {
+            height: 50px;
+            width: 197px;
+        }
+
+        .del:hover {
+            background-color: rgb(255, 148, 148);
+        }
+
+        .clear {
+            width: 298px;
+            height: 50px;
+            background-color: rgb(253, 85, 85);
+        }
+
+        .clear:hover {
+            background-color: rgb(255, 148, 148);
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <div class="heading">
+            <h1>Let's Calculate</h1>
+            <hr>
+        </div>
+    </header>
+    <div class="cal">
+
+        <form name="form">
+
+
+
+            <input type="text" name="answer" class="ans">
+
+            <hr>
+
+            <input type="button" value="1" onclick="form.answer.value +='1'" class="ind">
+            <input type="button" value="2" onclick="form.answer.value +='2'" class="ind">
+            <input type="button" value="+" onclick="form.answer.value +='+'" class="ind sign">
+
+            <br><br>
+
+            <input type="button" value="3" onclick="form.answer.value +='3'" class="ind">
+            <input type="button" value="4" onclick="form.answer.value +='4'" class="ind">
+            <input type="button" value="-" onclick="form.answer.value +='-'" class="ind sign">
+
+            <br><br>
+
+            <input type="button" value="5" onclick="form.answer.value +='5'" class="ind">
+            <input type="button" value="6" onclick="form.answer.value +='6'" class="ind">
+            <input type="button" value="*" onclick="form.answer.value +='*'" class="ind sign">
+
+            <br><br>
+
+            <input type="button" value="7" onclick="form.answer.value +='7'" class="ind">
+            <input type="button" value="8" onclick="form.answer.value +='8'" class="ind">
+            <input type="button" value="/" onclick="form.answer.value +='/'" class="ind sign">
+
+            <br><br>
+
+            <input type="button" value="9" onclick="form.answer.value +='9'" class="ind">
+            <input type="button" value="0" onclick="form.answer.value +='0'" class="ind ">
+            <input type="button" value="." onclick="form.answer.value +='.'" class="ind sign">
+
+            <br><br>
+
+            <INPUT TYPE="button" NAME="Delete" VALUE="  Delete"
+                OnClick="form.answer.value = form.answer.value.substring(0, form.answer.value.length - 1)" class="del">
+
+            <input type="button" value="=" onclick="form.answer.value =eval(form.answer.value)" class="ind equal">
+            <br><br>
+            <input type="button" value="Clear All" onclick="form.answer.value = ''" class="clear">
+
+
+
+
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>
